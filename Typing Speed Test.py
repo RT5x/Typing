@@ -2,9 +2,7 @@ import time
 import math
 from time import sleep
 
-i = 1
-while i < 100:
-  i += 1
+def function():
   sleep(1)
   print("Get ready . . . ")
   print(" ")
@@ -13,11 +11,15 @@ while i < 100:
   x = str(input("Type your script here: "))
   tic2 = time.perf_counter()
   y = len(x)
-  def time(tic1, tic2):
+  def time1(tic1, tic2):
     return round(tic2 - tic1, 2)
   def cps(y, tic1, tic2):
     return round(y / (tic2 - tic1), 2)
-  print("You typed " + str(y) + " characters in " + str(time(tic1, tic2)) + " seconds.") 
+  print("You typed " + str(y) + " characters in " + str(time1(tic1, tic2)) + " seconds.") 
   print(" ")
   print("This translates to " + str(cps(len(x), tic1, tic2) * 12) + " words per minute.")
-  break
+
+i = 1
+while i < 100:
+  function()
+  i += 1
