@@ -17,9 +17,9 @@ def function():
     return round(y / (tic2 - tic1), 2)
   print("You typed " + str(y) + " characters in " + str(time1(tic1, tic2)) + " seconds.") 
   print(" ")
-  print("This translates to " + str(cps(len(x), tic1, tic2) * 12) + " words per minute.")
+  print("This translates to " + str(round(cps(len(x), tic1, tic2) * 12, 2)) + " words per minute.")
 
 i = 1
-while i < 100:
+while i <= 100:  # Number of times you want to try speedtest
   function()
   i += 1
